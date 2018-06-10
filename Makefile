@@ -10,7 +10,8 @@ FRACTOL =	./src/main.c\
 			./src/burningship.c\
 			./src/julia.c\
 			./src/manage_keys.c\
-			./src/mandelbrot.c
+			./src/mandelbrot.c \
+			./src/general.c
 
 FRACTOL_OBJ = $(FRACTOL:.c=.o)
 

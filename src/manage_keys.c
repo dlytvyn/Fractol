@@ -12,7 +12,7 @@
 
 #include "../includes/fractol.h"
 
-int		key_hook_add(int key, t_gen *gen)
+int		manage_keys_add(int key, t_gen *gen)
 {
 	if (key == 19)
 		gen->color = 2350;
@@ -28,7 +28,7 @@ int		key_hook_add(int key, t_gen *gen)
 	return (0);
 }
 
-int		key_hook(int key, t_gen *gen)
+int		manage_keys(int key, t_gen *gen)
 {
 	if (key == 53)
 		exit(1);
@@ -48,7 +48,7 @@ int		key_hook(int key, t_gen *gen)
 		fractal_initialization(gen);
 	else if (key == 18)
 		gen->color = 177216;
-	key_hook_add(key, gen);
+	manage_keys_add(key, gen);
 	fractal_calculation(gen);
 	return (0);
 }
@@ -75,7 +75,7 @@ void	zoom_out(t_gen *gen)
 	gen->iterations_max--;
 }
 
-int		mouse_hook(int mousecode, int x, int y, t_gen *gen)
+int		manage_mouse(int mousecode, int x, int y, t_gen *gen)
 {
 	if (mousecode == 5 || mousecode == 1)
 		zoom_in(x, y, gen);

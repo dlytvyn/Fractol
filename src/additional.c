@@ -18,7 +18,7 @@ int		ft_close(void)
 	return (0);
 }
 
-void	put_pxl_to_img(t_gen *data, int x, int y, int color)
+void	put_pixel(t_gen *data, int x, int y, int color)
 {
 	if (data->x < SIZE && data->y < SIZE)
 	{

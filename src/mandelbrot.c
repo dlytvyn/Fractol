@@ -38,9 +38,9 @@ void	mandelbrot_calculation(t_gen *gen)
 		gen->iterations++;
 	}
 	if (gen->iterations == gen->iterations_max)
-		put_pxl_to_img(gen, gen->x, gen->y, 0x000000);
+		put_pixel(gen, gen->x, gen->y, 0x000000);
 	else
-		put_pxl_to_img(gen, gen->x, gen->y, (gen->color * gen->iterations));
+		put_pixel(gen, gen->x, gen->y, (gen->color * gen->iterations));
 }
 
 void	*mandelbrot(void *thread)
